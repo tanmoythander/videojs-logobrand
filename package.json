@@ -1,6 +1,6 @@
 {
   "name": "videojs-logobrand",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom branding logo plugin for video.js v6.x.x and v7.x.x",
   "main": "index.js",
   "scripts": {

@@ -3,6 +3,8 @@ videojs-logobrand
 
 Add a custom branding logo inside the video.js player with options to control image size, opacity, position and visibility. Perfect for branding the media source.
 
+Compatible to video.js v6.x.x and v7.x.x
+
 ### Install logobrand
 Easiest way to install is through npm
 ```

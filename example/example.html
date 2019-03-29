@@ -1,0 +1,27 @@
+<head>
+	<title>Video.js logobrand example</title>
+	<link rel="stylesheet" href="video-js.min.css">
+	<link rel="stylesheet" href="../src/videojs.logobrand.css">
+	<script src="video.min.js"></script>
+</head>
+<body>
+	<video id="video" class="video-js vjs-default-skin" data-setup="{}" controls width="auto" height="auto">
+		<source src="http://vjs.zencdn.net/v/oceans.mp4">
+	</video>
+	<script src="../src/videojs.logobrand.js"></script>
+	<script>
+		var player = videojs('video');
+
+		// initialize the plugin with some custom options:
+		player.logobrand({
+			image: 'https://console.quanticdynamics.cloud/images/Quantic-Dynamics-white.png',
+			destination: 'https://www.quanticdynamics.com/',
+			autoHide: false,
+			width: '170px',
+			opacity: 0.7,
+			position: 'absolute',
+			top: '20px',
+			right: '30px'
+		});
+	</script>
+</body>

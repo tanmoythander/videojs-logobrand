@@ -1,0 +1,19 @@
+{
+  "name": "videojs-logobrand",
+  "version": "1.0.0",
+  "description": "Custom branding logo plugin for video.js v6.x.x and v7.x.x",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanmoythander/videojs-logobrand.git"
+  },
+  "author": "Tanmoy Thander",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tanmoythander/videojs-logobrand/issues"
+  },
+  "homepage": "https://github.com/tanmoythander/videojs-logobrand#readme"
+}

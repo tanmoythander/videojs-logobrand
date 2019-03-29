@@ -1,8 +1,8 @@
 /*
  * Video.js logobrand
- * https://github.com/Mewte/videojs-logobrand
+ * https://github.com/tanmoythander/videojs-logobrand.git
  *
- * Copyright (c) 2014 Mewte @ InstaSynch
+ * Copyright (c) 2019 Tanmoy Thander @ QuanticDynamics
  * Licensed under the MIT license
  */
 
@@ -10,33 +10,46 @@
 
 	// define some reasonable defaults
 	var defaults = {
-		image: '',
-		destination: '#'
+		image: 'https://www.videojs.com/img/logo.png',
+		destination: 'https://www.videojs.com/',
+		width: 'auto',
+		height: 'auto',
+		autoHide: true,
+		opacity: 1
 	};
 	// plugin initializer
 	var logobrand = function(options) {
-		var settings = videojs.util.mergeOptions(defaults, options), player = this;
+		var settings = videojs.mergeOptions(defaults, options);
+		var player = this;
+
+		// link element
 		var link = document.createElement("a");
-			link.id = "vjs-logobrand-image-destination";
-			link.href = settings.destination;
-			link.target = "_blank";
+		link.id = "vjs-logobrand-image-destination";
+		link.href = settings.destination;
+		link.target = "_blank";
+
+		// image element
 		var image = document.createElement('img');
-			image.id = 'vjs-logobrand-image';
-			//image.style.height = settings.height;
-			//image.style.width = settings.width;
-			image.src = settings.image;
+		image.id = settings.autoHide?
+			'vjs-logobrand-image-autoHide':
+			'vjs-logobrand-image';
+		image.src = settings.image;
+		// image style config
+		image.style.height = settings.height;
+		image.style.width = settings.width;
+		image.style.opacity = settings.opacity;
+		image.style.position = settings.position;
+		image.style.top = settings.top;
+		image.style.bottom = settings.bottom;
+		image.style.left = settings.left;
+		image.style.right = settings.right;
+
 		link.appendChild(image);
 		player.el().appendChild(link);
-		
-		this.loadImage = function(src){
-			document.getElementById("vjs-logobrand-image").src=src;
-		};
-		this.setDestination = function(href){
-			document.getElementById("vjs-logobrand-image-destination").href = href;
-		};
+
 		return this;
 	};	
 	// register the plugin with video.js
-	vjs.plugin('logobrand', logobrand);
+	vjs.registerPlugin('logobrand', logobrand);
 
 }(window.videojs));

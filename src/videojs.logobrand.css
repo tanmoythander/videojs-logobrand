@@ -1,16 +1,23 @@
-img#vjs-logobrand-image {
-	position: absolute;
-	top: 4px;
-	right: 4px;
+#vjs-logobrand-image,
+#vjs-logobrand-image-autoHide {
 	transition: visibility 0.1s ease 0s, opacity 0.1s ease 0s;
-    visibility: visible;
-}
-.vjs-user-inactive img#vjs-logobrand-image {
 	visibility: hidden;
 }
-.vjs-user-inactive.vjs-paused img#vjs-logobrand-image {
+
+.vjs-has-started #vjs-logobrand-image,
+.vjs-has-started #vjs-logobrand-image-autoHide {
 	visibility: visible;
 }
-.vjs-ad-playing a#vjs-logobrand-image-destination {
+.vjs-user-inactive #vjs-logobrand-image {
+	visibility: visible;
+}
+.vjs-user-inactive #vjs-logobrand-image-autoHide {
+	visibility: hidden;
+}
+.vjs-user-inactive.vjs-paused #vjs-logobrand-image,
+.vjs-user-inactive.vjs-paused #vjs-logobrand-image-autoHide {
+	visibility: visible;
+}
+.vjs-ad-playing #vjs-logobrand-image-destination {
 	display: none;
 }

@@ -11,7 +11,7 @@
 	// define some reasonable defaults
 	var defaults = {
 		image: 'https://www.videojs.com/img/logo.png',
-		destination: 'https://www.videojs.com/',
+		destination: '#',
 		width: 'auto',
 		height: 'auto',
 		autoHide: true,
